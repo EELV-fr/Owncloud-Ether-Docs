@@ -1,0 +1,9 @@
+v 0.1.6
+Fix : modifications to respect the Coding Style Guide
+
+v 0.1.5
+Add : specific icon
+Add : .url file tested and working on W7, OsX and Ubuntu
+
+V 0.1.0
+v0.1.0 : create the app
