@@ -85,7 +85,6 @@ $(document).ready(function(){
                   function(result){
                     if (result.status == 'success') {
                       var date=new Date();
-                      new FileToPad
                       FileList.addFile(filename+'.pad',0,date,false,false);
                       var tr=$('tr').filterAttr('data-file',filename+'.pad');
                       tr.attr('data-mime','text/x-url');
