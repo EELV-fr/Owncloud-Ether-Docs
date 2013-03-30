@@ -101,8 +101,6 @@ $(document).ready(function(){
                 );
               }
             );
-            $(this).remove();
-            $('#newPadFile>p').show();
           });
         });
     });
