@@ -84,22 +84,22 @@ $(document).ready(function(){
             $.get(
               OC.filePath('files_etherpad', 'ajax', 'host.php'),
               function (url) {
-                alert('weee');
-                var newname=input.val();
+                var filename=input.val();
                 var content='[EtherpadShortcut]\nURL='+url+'/p/'+CryptoJS.MD5('owncloud' + new Date().getMilliseconds() + 'etherpad');
                 $.post(
                   OC.filePath('files','ajax','newfile.php'),
-                  {dir:$('#dir').val(),filename:newname+'.pad',content:content},
+                  {dir:$('#dir').val(),filename:filename+'.pad',content:content},
                   function(result){
-                    if (result.status == 'success') {/*
+                    if (result.status == 'success') {
                       var date=new Date();
-                      FileList.addFile(name,0,date,false,hidden);
-                      var tr=$('tr').filterAttr('data-file',name);
+                      FileList.addFile(filename+'.pad',0,date,false,false);
+                      var tr=$('tr').filterAttr('data-file',filename+'.pad');
                       tr.attr('data-mime','text/plain');
                       tr.attr('data-id', result.data.id);
+                      var path = $('#dir').val();
                       getMimeIcon('text/plain',function(path){
-                        tr.find('td.filename').attr('style','background-image:url('+path+')');
-                      });*/
+                        tr.find('td.filename').attr('style','background-image:url('+OC.imagePath('files_etherpad', 'pad.png')+')');
+                      });
                     } else {
                       OC.dialogs.alert(result.data.message, 'Error');
                     }
