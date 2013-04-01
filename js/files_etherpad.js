@@ -79,16 +79,16 @@ $(document).ready(function(){
             $.get(
               OC.filePath('files_etherpad', 'ajax', 'host.php'),
               function (url) {
-                var filename=input.val();
+                var filename=getUniqueName(input.val()+'.url');
                 var content='[InternetShortcut]\nURL='+url+'/p/'+CryptoJS.MD5('owncloud' + new Date().getMilliseconds() + 'etherpad');
                 $.post(
                   OC.filePath('files','ajax','newfile.php'),
-                  {dir:$('#dir').val(),filename:filename+'.url',content:content},
+                  {dir:$('#dir').val(),filename:filename,content:content},
                   function(result){
                     if (result.status == 'success') {
                       var date=new Date();
-                      FileList.addFile(filename+'.url',0,date,false,false);
-                      var tr=$('tr').filterAttr('data-file',filename+'.url');
+                      FileList.addFile(filename,0,date,false,false);
+                      var tr=$('tr').filterAttr('data-file',filename);
                       tr.attr('data-mime','text/x-url');
                       tr.attr('data-id', result.data.id);
                       var path = $('#dir').val();
