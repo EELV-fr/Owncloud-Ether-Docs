@@ -3,5 +3,7 @@
 	'Etherpad Host' => 'Etherpad Host',
 	'ex' => 'ex',
 	'Title' => 'Titel',
-	'public link' => 'public link'
+	'public link' => 'public link',
+	'Pad' => 'Pad',
+	'save' => 'save',
 );

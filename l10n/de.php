@@ -4,4 +4,6 @@
 	'ex' => 'Z.B.',
   'Title' => 'Titel',
   'public link' => 'öffentlicher Link',
+  'Pad' => 'Pad',
+  'save' => 'speichern',
 );

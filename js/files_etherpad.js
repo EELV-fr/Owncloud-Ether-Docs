@@ -63,9 +63,11 @@ $(document).ready(function(){
         .appendTo('div#new>ul')
         .css('background-image', 'url(' + OC.imagePath('files_etherpad', 'pad.png') + ')')
         .data('type', 'text')
-        .children('p')
+        .off('click')
         .click(function() {
-          $(this).hide();
+          if($(this).children('p').length==0)
+            return;
+          $(this).children('p').remove();
           var form=$('<form></form>');
           var input=$('<input>');
           form.append(input);
@@ -100,6 +102,10 @@ $(document).ready(function(){
                 );
               }
             );
+            var li=form.parent();
+            form.remove();
+            li.append('<p>'+t('files_etherpad', 'Pad')+'</p>');
+            $('#new>a').click();
           });
         });
     });
