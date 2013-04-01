@@ -76,10 +76,18 @@ $(document).ready(function(){
           form.submit(function(event){
             event.stopPropagation();
             event.preventDefault();
+            var rawfilename = input.val();
+            if (rawfilename.length == 0) {
+              $("#notification").text('');
+              OC.Notification.show(t('files_etherpad', 'Padname cannot be empty'));
+              return false;
+            }
+            var filename = getUniqueName(rawfilename+'.url');
+            //TODO: Use core function
+            //url = OC.AppConfig.getValue('files_etherpad', 'files_etherpad_host');
             $.get(
               OC.filePath('files_etherpad', 'ajax', 'host.php'),
               function (url) {
-                var filename=getUniqueName(input.val()+'.url');
                 var content='[InternetShortcut]\nURL='+url+'/p/'+CryptoJS.MD5('owncloud' + new Date().getMilliseconds() + 'etherpad');
                 $.post(
                   OC.filePath('files','ajax','newfile.php'),
@@ -95,9 +103,11 @@ $(document).ready(function(){
                       getMimeIcon('text/plain',function(path){
                         tr.find('td.filename').attr('style','background-image:url('+OC.imagePath('files_etherpad', 'pad.png')+')');
                       });
-                    } else {
-                      OC.dialogs.alert(result.data.message, 'Error');
+                      $("#notification").text('');
+                      OC.Notification.show(t('files_etherpad', t('files_etherpad', 'New pad named ')+filename+t('files_etherpad', ' was created.')));
                     }
+                    else
+                      OC.dialogs.alert(result.data.message, 'Error');
                   }
                 );
               }

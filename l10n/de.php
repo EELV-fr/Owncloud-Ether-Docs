@@ -6,4 +6,8 @@
   'public link' => 'öffentlicher Link',
   'Pad' => 'Pad',
   'save' => 'speichern',
+  'Padname cannot be empty' => 'Pad muss benannt werden',
+  'New pad named ' => 'Neues Pad mit dem Namen ',
+	' was created.' => ' wurde erstellt.',
+  
 );
