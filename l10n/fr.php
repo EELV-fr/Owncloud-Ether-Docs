@@ -8,5 +8,5 @@
   'save' => 'save',
   'Padname cannot be empty' => 'Padname cannot be empty',
   'New pad named ' => 'New pad named ',
-	' was created.' => ' was created.',
+  ' was created.' => ' was created.',
 );
