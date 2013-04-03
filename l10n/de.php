@@ -3,7 +3,7 @@
   'Edit' => '&Auml;ndern',
   'Etherpad Host' => 'Etherpad Host',
   'Ethercalc Host' => 'Ethercalc Host',
-  'ex' => 'Z.B.',
+  'ex:' => 'Z.B.:',
   'Title' => 'Titel',
   'public link' => 'öffentlicher Link',
   'Pad' => 'Pad',

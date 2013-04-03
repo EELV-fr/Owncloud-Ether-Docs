@@ -36,15 +36,12 @@ FileToPad.prototype={
     $("#editor").hide();
     $('#content table').hide();
     $('#controls').hide();
-    var oldcontent = $('#content').html();
     //pad headline
-    $('#content').html(oldcontent+'<div id="filetopad_bar">'+t('files_etherpad', 'Title')+': <strong>'+pad.file.replace('.url','')+'</strong>, '+t('files_etherpad', 'public link')+': <a href="'+pad.url+'">'+pad.url+'</a>'+'<a id="filetopad_close">x</a></div><iframe style="width:100%;height:90%;display:block;" id="filetopad_frame" src="'+pad.url+'"></iframe>');
+    $('#content').append('<div id="filetopad_bar">'+t('files_etherpad', 'Title')+': <strong>'+pad.file.replace('.url','')+'</strong>, '+t('files_etherpad', 'public link')+': <a href="'+pad.url+'">'+pad.url+'</a>'+'<a id="filetopad_close">x</a></div><iframe style="width:100%;height:90%;display:block;" id="filetopad_frame" src="'+pad.url+'"></iframe>');
     $('#pageWidthOption').attr('selected','selected');    
-    $('#filetopad_bar').css('padding-left','30px');  
-    
+    $('#filetopad_bar').css('padding-left','30px');    
     $('#filetopad_close').click(function(){pad.hide();});
-    $('#filetopad_close').css('float','right');
-    $('#filetopad_close').css('padding','5px');
+    $('#filetopad_close').css({float:'right',padding:'5px'});
   },
   hide:function(){
     $('#controls').show();

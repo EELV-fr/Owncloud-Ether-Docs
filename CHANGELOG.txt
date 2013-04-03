@@ -1,3 +1,7 @@
+v 0.3.0
+Add : Ethercalc support
+Fix : Opening a document kill hover actions
+
 v 0.2.0
 Add : OC5 compability
 Add : DE translation

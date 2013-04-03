@@ -3,7 +3,7 @@
   'Edit' => '&Eacute;diter',
   'Etherpad Host' => 'H&ocirc;te Etherpad',
   'Ethercalc Host' => 'H&ocirc;te Ethercalc',
-  'ex' => 'ex:',
+  'ex:' => 'ex :',
   'Title' => 'Titre',
   'public link' => 'Lien public',
   'Pad' => 'Document collaboratif',
