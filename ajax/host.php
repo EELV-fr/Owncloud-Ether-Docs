@@ -1,4 +1,7 @@
 <?php
 OCP\User::checkLoggedIn();
-echo(OC_Appconfig::getValue('files_etherpad', 'files_etherpad_host',''));
+$get_host='files_etherpad_host';
+if($_REQUEST['type']=='calc') $get_host='files_etherpad_calc_host';
+// SOme other formats
+echo(OC_Appconfig::getValue('files_etherpad', $get_host,''));
 ?>

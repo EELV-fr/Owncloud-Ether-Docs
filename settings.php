@@ -22,6 +22,7 @@
 */
 $params = array(
     'files_etherpad_host',
+    'files_etherpad_calc_host',
 );
 
 if ($_POST) {

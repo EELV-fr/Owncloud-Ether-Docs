@@ -3,7 +3,7 @@
     <id>files_etherpad</id>
     <name>Files Etherpad</name>
     <description>Create etherpad shortcuts</description>
-    <version>0.1.7</version>
+    <version>0.2.0</version>
     <licence>CC BY-NC 3.0</licence>
     <author>Bastien Ho (EELV), Ernesto Ruge</author>
     <require>5.0</require>
