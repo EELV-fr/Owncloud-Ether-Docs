@@ -8,7 +8,7 @@
   'public link' => 'Lien public',
   'Pad' => 'Document collaboratif',
   'Calc' => 'Tableur collaboratif',
-  'save' => 'Sauvegarder',
+  'Save' => 'Sauvegarder',
   'Padname cannot be empty' => 'Le nom du Pad ne peut être vide',
   'Document name cannot be empty' => 'Le nom du document ne peut être vide',
   'New document named ' => 'Nouveau document nommé ',

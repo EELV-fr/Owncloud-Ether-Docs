@@ -16,4 +16,3 @@
         <input type="submit" value="<?php echo $l->t('Save');?>" />
     </fieldset>
 </form>
-<?php ?>

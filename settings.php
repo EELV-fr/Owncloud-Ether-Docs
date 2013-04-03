@@ -3,6 +3,7 @@
 * ownCloud - Files Etherpad
 *
 * @author Bastien Ho (EELV - Urbancube)
+ * @contributor Ernesto Ruge
 * @copyleft 2012 bastienho@urbancube.fr
 * @projeturl http://ecolosites.eelv.fr/files_etherpad
 *

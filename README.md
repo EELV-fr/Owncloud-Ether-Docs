@@ -1,0 +1,1 @@
+Create shortcuts files for collaborative documents such as etherpad and ethercalc.<br/> Uses .url extension in order to open files from desktop sync folder.

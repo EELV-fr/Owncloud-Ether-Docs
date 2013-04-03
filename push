@@ -1,3 +1,0 @@
-sudo -u upload git add .
-sudo -u upload git commit -m "init"
-sudo -u upload git push -u origin master
