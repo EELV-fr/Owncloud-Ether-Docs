@@ -8,7 +8,7 @@
   'public link' => 'öffentlicher Link',
   'Pad' => 'Pad',
   'Calc' => 'Calc',
-  'save' => 'speichern',
+  'Save' => 'speichern',
   'Padname cannot be empty' => 'Pad muss benannt werden',
   'Document name cannot be empty' => 'Document name cannot be empty',
   'New document named ' => 'Neues document mit dem Namen ',

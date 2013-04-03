@@ -30,7 +30,6 @@ function FileToPad(dir,file){
     }
   );
 }
-
 FileToPad.prototype={  
   show:function(){
     $("#editor").hide();

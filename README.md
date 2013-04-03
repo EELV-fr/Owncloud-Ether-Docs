@@ -1,1 +1,1 @@
-This is a plugin for Owncloud which adds Etherpads as a file. It's a fork of http://apps.owncloud.com/content/show.php/Files+Etherpad?content=155237
+Create shortcuts files for collaborative documents such as etherpad and ethercalc.<br/> Uses .url extension in order to open files from desktop sync folder.
