@@ -52,20 +52,27 @@ FileToPad.prototype={
   }
 };
 
+function checkPadIcons(){
+	if($('#fileList').length>0) {
+		$('tr').filterAttr('data-type', 'file').filterExtension( 'url').attr('data-mime','text/x-url');
+	    $('tr').filterAttr('data-type', 'file').filterExtension( 'url').filterSubExtension( 'pad').children('td:first-child').css('background-image','url('+OC.imagePath('files_etherpad', 'pad.png')+')');
+	    $('tr').filterAttr('data-type', 'file').filterExtension( 'url').filterSubExtension( 'calc').children('td:first-child').css('background-image','url('+OC.imagePath('files_etherpad', 'calc.png')+')');
+	    if (typeof FileActions!=='undefined'){
+	      FileActions.register('text/x-url',t('files_etherpad','Edit'), OC.PERMISSION_READ, '',function(filename){
+	        pad=new FileToPad($('#dir').val(),filename);
+	      });
+	     FileActions.setDefault('text/x-url',t('files_etherpad','Edit'));
+	    }
+   }
+}
+
 $(document).ready(function(){
   //update file list for pads
-  if(location.href.indexOf('files')!=-1) {
-    $('tr').filterAttr('data-type', 'file').filterExtension( 'url').attr('data-mime','text/x-url');
-    $('tr').filterAttr('data-type', 'file').filterExtension( 'url').children('td:first-child').css('background-image','url('+OC.imagePath('files_etherpad', 'pad.png')+')');
-    //For files created after v 0.2.0 : sub extension check
-    $('tr').filterAttr('data-type', 'file').filterExtension( 'url').filterSubExtension( 'calc').children('td:first-child').css('background-image','url('+OC.imagePath('files_etherpad', 'calc.png')+')');
-    if (typeof FileActions!=='undefined'){
-      FileActions.register('text/x-url',t('files_etherpad','Edit'), OC.PERMISSION_READ, '',function(filename){
-        pad=new FileToPad($('#dir').val(),filename);
-      });
-     FileActions.setDefault('text/x-url',t('files_etherpad','Edit'));
-    }
-  }
+  checkPadIcons();
+  $('#fileList').bind('html', function( event ) {
+  	
+  	checkPadIcons();
+  }).initMutation('html');
   // New button hook
   if($('div#new>ul>li').length > 0) {
   	

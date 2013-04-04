@@ -1,3 +1,6 @@
+v 0.3.1
+Add : Filelist content change event
+
 v 0.3.0
 Add : Ethercalc support
 Fix : Opening a document kill hover actions
