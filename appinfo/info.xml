@@ -3,7 +3,7 @@
     <id>files_etherpad</id>
     <name>Ether Docs</name>
 	<description>Create shortcuts files for collaborative documents etherpad and ethercalc.<br/> Uses .url extension in order to open files from desktop sync folder.</description>
-    <version>0.3.1</version>
+    <version>0.3.2</version>
     <licence>CC BY-NC 3.0</licence>
     <author>Bastien Ho (EELV), Ernesto Ruge</author>
     <require>5.0</require>
