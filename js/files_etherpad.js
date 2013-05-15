@@ -23,7 +23,7 @@ function FileToPad(dir,file){
   pad.url='about:blank';
   //get file content using files app api
   $.get(
-    OC.filePath('files','ajax','download.php?dir='+dir+'&files='+file),
+    OC.filePath('files','ajax','download.php') + '?dir='+dir+'&files='+file,
     function name(link) {
       pad.url=link.split('\n')[1].substr(4);
       pad.show();
