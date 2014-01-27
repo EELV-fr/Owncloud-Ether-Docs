@@ -16,6 +16,11 @@ $.fn.filterSubExtension = function(extension) {
   });
 };
 
+function FilenameToMD5(filename, type) {
+    d = new Date();
+    return CryptoJS.MD5('owncloud|' + filename + "|" + d.getTime() + d.getMilliseconds() + "|" + type);
+}
+
 function FileToPad(dir,file){
   pad=this;
   pad.dir=dir;
@@ -110,7 +115,7 @@ $(document).ready(function(){
               {type:'pad'},
               function (url) {
                 //generate .url file
-                var content='[InternetShortcut]\nURL='+url+'/p/'+CryptoJS.MD5('owncloud' + new Date().getMilliseconds() + 'etherpad');
+                var content='[InternetShortcut]\nURL='+url+'/p/'+FilenameToMD5(rawfilename, 'etherpad');
                 //send file to server using files app api
                 $.post(
                   OC.filePath('files','ajax','newfile.php'),
@@ -180,7 +185,7 @@ $(document).ready(function(){
               {type:'calc'},
               function (url) {
                 //generate .url file
-                var content='[InternetShortcut]\nURL='+url+'/'+CryptoJS.MD5('owncloud' + new Date().getMilliseconds() + 'ethercalc');
+                var content='[InternetShortcut]\nURL='+url+'/'+FilenameToMD5(rawfilename, 'ethercalc');;
                 //send file to server using files app api
                 $.post(
                   OC.filePath('files','ajax','newfile.php'),
