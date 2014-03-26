@@ -80,7 +80,7 @@ $(document).ready(function(){
   if($('div#new>ul>li').length > 0) {
   	
   	//create pad file type
-    getMimeIcon('text/plain', function(icon) {
+    Files.getMimeIcon('text/plain', function(icon) {
       $('<li><p>' + t('files_etherpad', 'Pad') + '</p></li>')
         .attr('id', 'newPadFile')
         .appendTo('div#new>ul')
@@ -150,7 +150,7 @@ $(document).ready(function(){
         });
     });
     //create calc file type
-    getMimeIcon('text/plain', function(icon) {
+    Files.getMimeIcon('text/plain', function(icon) {
       $('<li><p>' + t('files_etherpad', 'Calc') + '</p></li>')
         .attr('id', 'newCalcFile')
         .appendTo('div#new>ul')
