@@ -1,3 +1,8 @@
+v 0.3.3
+Add : OC6 Friendly
+Fix : bugfix/filepath by otetard
+Fix : MD5 fix by otetard
+
 v 0.3.2
 Add : Stylise docs bar, cute close button
 
